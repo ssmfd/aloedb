@@ -72,7 +72,7 @@ export function getPathDirname(path: string): string {
 	parsed.pop();
 
 	const dirname: string = parsed.join('/');
-	return dirname;
+	return path.startsWith("/") ? "/" + dirname : dirname;
 }
 
 /**
